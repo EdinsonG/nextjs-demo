@@ -19,7 +19,6 @@
     "next": "^15.1.7",
     "nextjs-toploader": "^3.9.17",
     "react": "19.1.0",
-    "react-apexcharts": "1.7.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.63.0",
     "react-mui-sidebar": "^1.6.3",
