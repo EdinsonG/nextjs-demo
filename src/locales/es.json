@@ -1,0 +1,67 @@
+{
+  "login": {
+    "title": "Iniciar sesión",
+    "forgotPassword1": "¿Olvidaste tu contraseña?",
+    "forgotPassword2": " ¡Haz clic aquí para recuperarla!",
+    "signup1": "¿No tienes cuenta?",
+    "signup2": "¡Haga clic aquí para registrarse!"
+  },
+  "form": {
+    "names": "Nombre completo",
+    "email": "Correo electrónico",
+    "phoneNumber": "Número de teléfono",
+    "password": "Contraseña",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Confirma tu contraseña"
+  },
+  "recoverPassword": {
+    "title": "Recuperar contraseña",
+    "changePassword": "Cambiar contraseña",
+    "backLink": "Volver a inicio de sesión",
+    "titleModalSucces": "¡Recuperación de contraseña exitosa!",
+    "titleModalDescriptionSucces": "Serás redirigido al inicio de sesión donde podras ingresar con tu nueva contraseña"
+  },
+  "signup": {
+    "title": "Registrate",
+    "login1": "¿Ya tienes cuenta?",
+    "login2": " ¡Haz clic aquí para iniciar sesión!",
+    "titleModalSucces": "¡Registro exitoso!",
+    "titleModalDescriptionSucces": "Se ha registrado exitosamente, será redirigido al inicio de sesión donde podras ingresar con tus credenciales."
+  },
+  "buttons": {
+    "save": "Guardar"
+  },
+  "language": {
+    "change": "Cambiar idioma a {item}",
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "userInfo": {
+    "settings": "Configuración de la cuenta",
+    "profile": "Ver perfil"
+  },
+  "logout": {
+    "title": "Cerrar sesión",
+    "description": "¿Estás seguro que quieres cerrar sesión?",
+    "yes": "Si",
+    "no": "No",
+    "profile": "Perfil"
+  },
+  "validations": {
+    "input_required": "Este campo es requerido",
+    "names_max": "Máximo 30 caracteres",
+    "names_valid": "Máximo 30 caracteres",
+    "email_invalid": "Correo electrónico inválido",
+    "phone_invalid": "Número de teléfono inválido",
+    "password_invalid": "Debe contener mínimo 8 caracteres, 1 letra mayúscula y 1 número",
+    "confirm_password": "Las contraseñas deben coincidir"
+  },
+  "navbar": {
+    "description": "Solución del panel de administración de Next.js"
+    },
+  "sidebar": { 
+    "main": "Principal", 
+    "dashboard": "Panel de control", 
+    "sample-page": "Página de muestra" 
+  }
+}

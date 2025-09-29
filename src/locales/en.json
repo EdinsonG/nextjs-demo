@@ -1,0 +1,68 @@
+{
+  "login": {
+    "title": "Sign in",
+    "forgotPassword1": "Forgot your password?",
+    "forgotPassword2": "Click here to recover it!",
+    "signup1": "Don't have an account?",
+    "signup2": "Click here to sign up!"
+  },
+  "form": {
+    "names": "Full Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "password": "Password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm your password"
+  },
+  "recoverPassword": {
+    "title": "Recover Password",
+    "changePassword": "Change Password",
+    "sendEmail": "Send Recovery Link",
+    "backLink": "Back to Login",
+    "titleModalSucces": "Success",
+    "titleModalDescriptionSucces": "You will be redirected to the login page where you can enter your new password."
+  },
+  "signup": {
+    "title": "Register",
+    "login1": "Already have an account?",
+    "login2": " Click here to log in!",
+    "titleModalSucces": "Registration successful.",
+    "titleModalDescriptionSucces": "You have successfully registered, you will be redirected to the login where you can enter with your credentials"
+  },
+  "buttons": {
+    "save": "Save"
+  },
+  "language": {
+    "change": "Change language to {item}",
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "userInfo": {
+    "settings": "Account Settings",
+    "profile": "View Profile"
+  },
+  "logout": {
+    "title": "Logout",
+    "description": "Are you sure you want to log out?",
+    "yes": "Yes",
+    "no": "No",
+    "profile": "Profile"
+  },
+  "validations": {
+    "input_required": "This field is required",
+    "names_max": "Maximum 30 characters",
+    "names_valid": "Maximum 30 characters",
+    "email_invalid": "Invalid email",
+    "phone_invalid": "Invalid phone number",
+    "password_invalid": "Must contain a minimum of 8 characters, 1 capital letter, and 1 number",
+    "confirm_password": "Passwords must match"
+  },
+  "navbar": {
+    "description": "Next.js Admin Dashboard Solution"
+  },
+  "sidebar": {
+    "main": "Main",
+    "dashboard": "Dashbaord",
+    "sample-page": "Sample Page"
+  }
+}
