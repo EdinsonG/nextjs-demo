@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { CssBaseline } from '@mui/material';
 import NextTopLoader from "nextjs-toploader";
 import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "@/theme/DefaultTheme";
 import { LocaleProvider } from '@/context/Localecontext';
-import { baseligthTheme } from "@/styles/theme/DefaultTheme";
 import { FloatingLanguageSwitcher, Loading, GlobalSuccess, GlobalModal } from '@/components';
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <LocaleProvider>
-          <ThemeProvider theme={baseligthTheme}>
+          <ThemeProvider theme={theme}>
             <CssBaseline />
             <NextTopLoader color="#5750F1" showSpinner={false} />
             {children}

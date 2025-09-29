@@ -1,7 +1,6 @@
 'use client';
 
-import LanguageIcon from '@mui/icons-material/Language';
-import { IconButton, Tooltip, keyframes } from '@mui/material';
+import { IconButton, Tooltip, Typography, keyframes } from '@mui/material';
 // Internal
 import { useLocale } from "@/context/Localecontext";
 
@@ -20,13 +19,13 @@ export default function FloatingLanguageSwitcher() {
         onClick={() => setLocale(locale === "en" ? "es" : "en")}
         sx={{
           position: 'fixed',
-          bottom: 16,
-          right: 16,
+          bottom: 10,
+          right: 20,
           zIndex: 1300,
           background: 'linear-gradient(45deg, #5D87FF, #4570EA, #5D87FF)',
           color: 'white',
-          width: 56,
-          height: 56,
+          width: 45,
+          height: 45,
           borderRadius: '50%',
           animation: `${pulse} 2.5s infinite`,
           transition: 'background 0.3s ease, box-shadow 0.3s ease',
@@ -35,9 +34,10 @@ export default function FloatingLanguageSwitcher() {
             background: 'linear-gradient(45deg, #4570EA, #5D87FF, #4570EA)'
           },
         }}
-        aria-label={`Change language to ${locale === "en" ? "Spanish" : "English"}`}
       >
-        <LanguageIcon />
+        <Typography variant="body1" color="main.light">
+          {locale === "en" ? "ES" : "EN"}
+        </Typography>
       </IconButton>
     </Tooltip>
   );

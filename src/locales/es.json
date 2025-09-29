@@ -12,7 +12,8 @@
     "phoneNumber": "Número de teléfono",
     "password": "Contraseña",
     "newPassword": "Nueva contraseña",
-    "confirmPassword": "Confirma tu contraseña"
+    "confirmPassword": "Confirma tu contraseña",
+    "terms": "Acepto los términos y condiciones"
   },
   "recoverPassword": {
     "title": "Recuperar contraseña",
@@ -37,7 +38,7 @@
     "english": "Inglés"
   },
   "userInfo": {
-    "settings": "Configuración de la cuenta",
+    "settings": "Configuración",
     "profile": "Ver perfil"
   },
   "logout": {

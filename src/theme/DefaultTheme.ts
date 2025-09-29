@@ -10,9 +10,9 @@ export const plus = Plus_Jakarta_Sans({
   fallback: ["Helvetica", "Arial", "sans-serif"],
 });
 
-export const baseligthTheme = createTheme({
-  direction: "ltr",
+export const theme = createTheme({
   palette: {
+    mode: "light",
     primary: {
       main: "#5D87FF",
       light: "#ECF2FF",

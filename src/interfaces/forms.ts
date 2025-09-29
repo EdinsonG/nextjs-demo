@@ -18,4 +18,11 @@ export interface PurchaseFormData {
   phone: number;
   newPassword: string;
   confirmPassword: string;
+  terms: boolean;
+}
+
+export interface InputOptionsProps extends FormMUIProps {
+  options: { value: string; text: string; subText?: string }[];
+  onClick?: (e: any) => void;
+  disableClearable?: boolean;
 }

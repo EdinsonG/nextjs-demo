@@ -41,4 +41,6 @@ export const fieldSchemas = {
     ),
     
   confirmPassword: yup.string().required('input_required').min(6, 'password_invalid').oneOf([yup.ref('newPassword')], 'confirm_password'),
+
+  terms: yup.boolean().oneOf([true], 'input_required'), 
 };

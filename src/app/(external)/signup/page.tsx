@@ -12,7 +12,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import useLoadingStore from '@/store/loadingStore';
 import useMessageStore from '@/store/messagesStore';
 import { useLocale } from "@/context/Localecontext";
-import { InputText, InputPass } from '@/components';
+import { InputText, InputPass, InputSelect, InputCheck, InputRadio } from '@/components';
 import { signupSchema } from '@/utils/validation/schemas';
 
 export default function SignUpPage() {
@@ -29,6 +29,7 @@ export default function SignUpPage() {
       email: '',
       phone: '',
       newPassword: '',
+      terms: false
     },
   });
 
@@ -50,6 +51,7 @@ export default function SignUpPage() {
         <InputText name="email" control={control} label={t('form.email')}  icon={<MailOutlineIcon />}/>
         <InputText name="phone" control={control} label={t('form.phoneNumber')}  icon={<SmartphoneIcon />}/>
         <InputPass name="newPassword" control={control} label={t('form.password')}  />
+        <InputCheck name="terms" control={control} label={t('form.terms')} />
         <Button variant="contained" type="submit" fullWidth disabled={!isValid}>
           {t('buttons.save')}
         </Button>
