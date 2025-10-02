@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { createTheme } from "@mui/material/styles";
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -10,111 +10,73 @@ export const plus = Plus_Jakarta_Sans({
   fallback: ["Helvetica", "Arial", "sans-serif"],
 });
 
-export const theme = createTheme({
+export const DarkTheme = createTheme({
   palette: {
-    mode: "light",
+    mode: "dark",
     primary: {
       main: "#5D87FF",
-      light: "#ECF2FF",
-      dark: "#4570EA",
+      light: "#4570EA",
+      dark: "#2C3E99",
     },
     secondary: {
       main: "#49BEFF",
-      light: "#E8F7FF",
-      dark: "#23afdb",
+      light: "#23afdb",
+      dark: "#178bb5",
     },
     success: {
       main: "#4CAF50",
-      light: "#A5D6A7",
-      dark: "#388E3C",
+      light: "#81C784",
+      dark: "#2E7D32",
       contrastText: "#ffffff",
     },
     error: {
       main: "#F44336",
-      light: "#EF9A9A",
-      dark: "#C62828",
+      light: "#EF5350",
+      dark: "#B71C1C",
       contrastText: "#ffffff",
     },
     warning: {
       main: "#FF9800",
       light: "#FFB74D",
-      dark: "#F57C00",
+      dark: "#E65100",
       contrastText: "#ffffff",
     },
     text: {
-      primary: "#2A3547",
-      secondary: "#5A6A85",
+      primary: "#FFFFFF",
+      secondary: "#B0BEC5",
     },
   },
   typography: {
     fontFamily: plus.style.fontFamily,
-    h1: {
-      fontWeight: 600,
-      fontSize: "2.25rem",
-      lineHeight: "2.75rem",
-      fontFamily: plus.style.fontFamily,
-    },
-    h2: {
-      fontWeight: 600,
-      fontSize: "1.875rem",
-      lineHeight: "2.25rem",
-      fontFamily: plus.style.fontFamily,
-    },
-    h3: {
-      fontWeight: 600,
-      fontSize: "1.5rem",
-      lineHeight: "1.75rem",
-      fontFamily: plus.style.fontFamily,
-    },
-    h4: {
-      fontWeight: 600,
-      fontSize: "1.3125rem",
-      lineHeight: "1.6rem",
-    },
-    h5: {
-      fontWeight: 600,
-      fontSize: "1.125rem",
-      lineHeight: "1.6rem",
-    },
-    h6: {
-      fontWeight: 600,
-      fontSize: "1rem",
-      lineHeight: "1.2rem",
-    },
-    body1: {
-      fontSize: "0.875rem",
-      fontWeight: 500,
-      lineHeight: "1.334rem",
-    },
-    body2: {
-      fontSize: "0.75rem",
-      letterSpacing: "0rem",
-      fontWeight: 400,
-      lineHeight: "1rem",
-    },
-    subtitle1: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-    },
-    subtitle2: {
-      fontSize: "0.875rem",
-      fontWeight: 400,
-    },
+    h1: { fontWeight: 600, fontSize: "2.25rem", lineHeight: "2.75rem" },
+    h2: { fontWeight: 600, fontSize: "1.875rem", lineHeight: "2.25rem" },
+    h3: { fontWeight: 600, fontSize: "1.5rem", lineHeight: "1.75rem" },
+    h4: { fontWeight: 600, fontSize: "1.3125rem", lineHeight: "1.6rem" },
+    h5: { fontWeight: 600, fontSize: "1.125rem", lineHeight: "1.6rem" },
+    h6: { fontWeight: 600, fontSize: "1rem", lineHeight: "1.2rem" },
+    body1: { fontSize: "0.875rem", fontWeight: 500, lineHeight: "1.334rem" },
+    body2: { fontSize: "0.75rem", fontWeight: 400, lineHeight: "1rem" },
+    subtitle1: { fontSize: "0.875rem", fontWeight: 400 },
+    subtitle2: { fontSize: "0.875rem", fontWeight: 400 },
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        body: {
+          backgroundColor: "#121212",
+          color: "#FFFFFF",
+        },
         ".MuiPaper-elevation9, .MuiPopover-root .MuiPaper-elevation": {
           boxShadow:
-            "rgb(145 158 171 / 30%) 0px 0px 2px 0px, rgb(145 158 171 / 12%) 0px 12px 24px -4px !important",
+            "rgba(0,0,0,0.6) 0px 0px 2px 0px, rgba(0,0,0,0.3) 0px 12px 24px -4px !important",
         },
-
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
           borderRadius: "10px",
+          backgroundColor: "#1E1E1E",
         },
       },
     },
@@ -149,7 +111,7 @@ export const theme = createTheme({
             boxShadow: 'none' 
           },
           '&.Mui-disabled': {
-            background: '#B0BEC5',
+            background: '#555',
           },
         },
         outlinedPrimary: {

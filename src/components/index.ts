@@ -15,3 +15,4 @@ export { default as GlobalSuccess } from '@/components/modals/GlobalSuccess';
 
 export { default as Loading } from '@/components/Loading';
 export { default as FloatingLanguageSwitcher } from '@/components/FloatingLangSwitcher';
+export { default as FloatingThemeSwitcher } from '@/components/FloatingThemeSwitcher';

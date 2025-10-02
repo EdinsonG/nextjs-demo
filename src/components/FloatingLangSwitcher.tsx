@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { IconButton, Tooltip, Typography, keyframes } from '@mui/material';
+// Internal
 import { useLocaleController } from '@/app/providers';
 
 const pulse = keyframes`
@@ -20,7 +21,7 @@ export default function FloatingLanguageSwitcher() {
   };
 
   return (
-    <Tooltip title={t("language.change", { item: locale === 'es' ? t('language.spanish') : t('language.english') })}>
+    <Tooltip placement="top" title={t("language.change", { item: locale === 'es' ? t('language.english') : t('language.spanish') })}>
       <IconButton
         onClick={toggleLocale}
         sx={{
@@ -34,15 +35,10 @@ export default function FloatingLanguageSwitcher() {
           height: 45,
           borderRadius: '50%',
           animation: `${pulse} 2.5s infinite`,
-          transition: 'background 0.3s ease, box-shadow 0.3s ease',
-          boxShadow: '0 4px 10px rgba(31, 204, 214, 0.6)',
-          '&:hover': {
-            background: 'linear-gradient(45deg, #4570EA, #5D87FF, #4570EA)'
-          },
         }}
       >
         <Typography variant="body1">
-          {locale === "en" ? "ES" : "EN"}
+          {locale === "en" ? "EN" : "ES"}
         </Typography>
       </IconButton>
     </Tooltip>
