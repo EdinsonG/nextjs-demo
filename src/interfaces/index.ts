@@ -4,3 +4,4 @@ export * from './modal';
 export * from './loading';
 export * from './messages';
 export * from './navigation';
+export * from './provider';

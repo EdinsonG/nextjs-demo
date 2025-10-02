@@ -4,13 +4,12 @@ import React from "react";
 import Link from "next/link";
 import { uniqueId } from "lodash";
 import { Box } from "@mui/material";
+import { useTranslations } from 'next-intl';
 import { usePathname } from "next/navigation";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
 import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUncheckedOutlined';
 import { Logo, Sidebar as MUI_Sidebar, Menu, MenuItem, Submenu, } from "react-mui-sidebar";
-// Internal
-import { useLocale } from "@/context/Localecontext";
 
 const renderMenuItems = (items: any, pathDirect: any) => {
   return items.map((item: any) => {
@@ -46,7 +45,7 @@ const renderMenuItems = (items: any, pathDirect: any) => {
 };
 
 export default function SidebarItems() {
-  const { t } = useLocale();
+  const t = useTranslations();
   const pathname = usePathname();
   const pathDirect = pathname;
 

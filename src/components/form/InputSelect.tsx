@@ -1,12 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { Controller } from 'react-hook-form';
 import { FormControl, FormHelperText, InputLabel, Select, MenuItem } from '@mui/material';
-import { useLocale } from "@/context/Localecontext";
 import { FormMUIProps, PurchaseFormData } from '@/interfaces';
 
-const InputSelect = ({ name, control, label, options, ...restProps }: FormMUIProps<PurchaseFormData>) => {
-  const { t } = useLocale();
+export default function InputSelect({ name, control, label, options, ...restProps }: FormMUIProps<PurchaseFormData>) {
+  const t = useTranslations();
 
   return (
     <Controller
@@ -30,5 +30,3 @@ const InputSelect = ({ name, control, label, options, ...restProps }: FormMUIPro
     />
   );
 };
-
-export default InputSelect;

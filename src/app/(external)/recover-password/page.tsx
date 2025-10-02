@@ -4,20 +4,20 @@ import Link from 'next/link';
 import type { InferType } from 'yup';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Typography, Button } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 // Internal Imports
 import useLoadingStore from '@/store/loadingStore';
 import useMessageStore from '@/store/messagesStore';
-import { useLocale } from "@/context/Localecontext";
 import { InputText, InputPass } from '@/components';
 import { recoverPasswordSchema } from '@/utils/validation/schemas';
 
 type RecoverPasswordFormData = InferType<typeof recoverPasswordSchema>;
 
 export default function RecoverPasswordPage() {
-  const { t } = useLocale();
+  const t = useTranslations();
   const router = useRouter();
   const { setLoading } = useLoadingStore();
   const { setSuccess } = useMessageStore();
