@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Button, Typography } from '@mui/material';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
@@ -11,13 +12,12 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 // Internal
 import useLoadingStore from '@/store/loadingStore';
 import useMessageStore from '@/store/messagesStore';
-import { useLocale } from "@/context/Localecontext";
 import { InputText, InputPass, InputSelect, InputCheck, InputRadio } from '@/components';
 import { signupSchema } from '@/utils/validation/schemas';
 
 export default function SignUpPage() {
-  const { t } = useLocale();
   const router = useRouter();
+  const t = useTranslations();
   const { setLoading } = useLoadingStore();
   const { setSuccess } = useMessageStore();
 

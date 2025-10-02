@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
@@ -11,11 +12,10 @@ import { Box, Typography, Menu, Button, IconButton, MenuItem, ListItemIcon, List
 // Internal
 import modalStore from '@/store/modalStore';
 import useLoadingStore from '@/store/loadingStore';
-import { useLocale } from "@/context/Localecontext";
 
 export default function UserInfo() {
-  const { t } = useLocale();
   const router = useRouter();
+  const t = useTranslations();
   const [isOpen, setIsOpen] = useState(null);
 
   const { setLoading } = useLoadingStore();

@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import { CssBaseline } from '@mui/material';
 import NextTopLoader from "nextjs-toploader";
 import { ThemeProvider } from "@mui/material/styles";
+// Internal
+import Providers from '@/app/providers';
 import { theme } from "@/theme/DefaultTheme";
-import { LocaleProvider } from '@/context/Localecontext';
 import { FloatingLanguageSwitcher, Loading, GlobalSuccess, GlobalModal } from '@/components';
 
 export const metadata: Metadata = {
@@ -14,12 +15,12 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
       <body>
-        <LocaleProvider>
+        <Providers>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <NextTopLoader color="#5750F1" showSpinner={false} />
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <GlobalSuccess />
             <FloatingLanguageSwitcher />
           </ThemeProvider>
-        </LocaleProvider>
+        </Providers>
       </body>
     </html>
   );

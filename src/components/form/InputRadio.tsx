@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { Controller } from 'react-hook-form';
 import { FormControl, FormControlLabel, Radio, RadioGroup, FormHelperText } from '@mui/material';
-import { useLocale } from "@/context/Localecontext";
 import { FormMUIProps, PurchaseFormData } from '@/interfaces';
 
-const InputRadio = ({ name, control, label, options, ...restProps }: FormMUIProps<PurchaseFormData> & { options: { value: string; label: string; }[]; }) => {
-  const { t } = useLocale();
+export default function InputRadio({ name, control, label, options, ...restProps }: FormMUIProps<PurchaseFormData> & { options: { value: string; label: string; }[]; }) {
+  const t = useTranslations();
 
   return (
     <Controller
@@ -34,5 +34,3 @@ const InputRadio = ({ name, control, label, options, ...restProps }: FormMUIProp
     />
   );
 };
-
-export default InputRadio;

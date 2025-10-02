@@ -4,20 +4,20 @@ import Link from 'next/link';
 import type { InferType } from 'yup';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Typography, Button } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 // Internal Imports
 import useLoadingStore from '@/store/loadingStore';
 import { InputText, InputPass } from '@/components';
-import { useLocale } from "@/context/Localecontext";
 import { loginSchema } from '@/utils/validation/schemas';
 
 type LoginFormData = InferType<typeof loginSchema>;
 
 export default function LoginPage() {
-  const { t } = useLocale();
   const router = useRouter();
+  const t = useTranslations();
   const { setLoading } = useLoadingStore();
 
   const { control, handleSubmit, formState: { isValid } } = useForm<LoginFormData>({

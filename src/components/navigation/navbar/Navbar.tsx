@@ -1,15 +1,15 @@
 'use client'
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Box, AppBar, Toolbar, Typography, styled, Stack, IconButton } from '@mui/material';
 // components
 import { UserInfo } from '@/components';
 import { NavbarProps } from '@/interfaces';
-import { useLocale } from "@/context/Localecontext";
 
 export default function Navbar({toggleMobileSidebar, sx}: NavbarProps) {
-  const { t } = useLocale();
+  const t = useTranslations();
 
   const AppBarStyled = styled(AppBar)(({ theme }) => ({
     boxShadow: 'none',
